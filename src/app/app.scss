@@ -14,3 +14,309 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+// http://ionicframework.com/docs/v2/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+.toolbar-ios{
+    ion-title{
+        padding: 0 55px 1px;
+    }
+    .toolbar-title-ios{
+        font-size: 1.7rem;
+        font-weight: 400;
+        // color: color($colors , secondary);
+    }
+}
+
+.back-button-ios{
+    margin-left: 10px !important;
+}
+
+.back-button-icon-ios{
+    font-size: 2.2rem;
+}
+
+.bar-button-menutoggle-ios{
+    ion-icon{
+        font-size: 2.5rem;
+    }
+}
+
+.bar-button{
+    margin-left: 4px;
+}
+
+.bar-button-ios[icon-only]{
+    min-width: 1.9em;
+    font-size: 1.4rem;
+}
+
+ion-footer{
+    .toolbar-title-ios{
+        font-size: 1.45rem !important;
+        text-align: center;
+        font-weight: normal !important;
+        // color: color($colors , light) !important;
+    }
+}
+
+.logo{
+    img{
+        margin-top: 20px;
+        width: 150px;
+    }
+}
+
+.app-header{
+    .toolbar-background-ios{
+        background: transparent;
+    }
+}
+
+.app-content{
+    // @extend %main-bg;
+    // @extend %cover;
+}
+
+.app-content-bg{
+    // @extend %sec-bg;
+    // @extend %cover;
+}
+
+.bold{
+    font-weight: 500;
+}
+
+.fab[mini]{
+    padding: 2.5px;
+}
+
+.social-media{
+    background: rgba(255, 255, 255, .25);
+    min-height: 90px;
+    .row{
+        justify-content: center;
+        min-height: 90px;
+        width: 180px;
+        margin: 0 auto;
+    }
+    ion-fab[center]{
+        top: 20px;
+    }
+    .fab{
+        box-shadow: none !important;
+    }
+}
+
+.popover-ios{
+    .popover-content{
+        border-radius: 0;
+        // background-color: color($colors , darkenGray);
+    }
+}
+
+.activeColor,.mainColor{
+    // color: color($colors , secondary) !important;
+}
+
+.whiteBg{
+    // background-color: color($colors , light) !important;
+}
+
+h3{
+    font-size: 1.6rem;
+    line-height: 2.3rem;
+}
+
+// Header Search
+// --------------------------------------------------
+.search-toolbar{
+    position: absolute;
+    top: 3px;
+    left: 0;
+    width: 0;
+    min-height: 44px;
+    padding: 5px 0;
+    margin-left: -1px;
+    -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+    -moz-transition: width 2s;
+    transition: width 2s;
+    .searchbar-ios{
+        .searchbar-search-icon{
+            top: 9px;
+        }
+    }
+}
+.activeSearch{
+    width: 75% !important;
+    -webkit-transition: width 2s !important; /* For Safari 3.1 to 6.0 */
+    -moz-transition: width 2s !important;
+    transition: width 2s !important;
+}
+
+// App statusbar(IOS platform) Sass
+// --------------------------------------------------
+.statusbar-padding{
+    padding-top: calc(20px + 4px);
+    min-height: calc(56px + 20px);
+    &.search-toolbar{
+        top: 24px;
+    }
+    &.search-toolbar{
+        min-height: 45px;
+    }
+}
+
+.expanded{
+    .statusbar-padding{
+        ion-title{
+            padding-top: 30px !important;
+        }
+    }
+}
+
+ion-footer{
+    .statusbar-padding{
+        padding: 4px;
+        min-height: 50px;
+    }
+}
+
+@media only screen and (max-width: 767px){
+    .ios{
+        .modal-wrapper{
+            .ion-page{
+                ion-header{
+                    .share-toolbar.statusbar-padding{
+                        &:first-child{
+                            padding: 4px;
+                            min-height: 60px;
+                            ion-title{
+                                padding-top: 0;
+                                height: 100%;
+                                min-height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// .expanded classes
+// --------------------------------------------------
+.expanded{
+    ion-title {
+        align-items: flex-start;
+        padding-top: 15px;
+    }
+    .toolbar-ios{
+        padding-top: 10px;
+        min-height: 160px;
+        height: 160px;
+        .toolbar-title-ios{
+            color: white;
+        }
+    }
+    .toolbar{
+        align-items: flex-start;
+    }
+    .toolbar-background{
+        // @extend %blind-mode;
+        // @extend %cover;
+        background-image: url(../assets/img/01.png);
+    }
+}
+
+// App Menu Sass
+// --------------------------------------------------
+@media (max-width: 340px){
+
+}
+
+.menu-inner{
+    width: 180px;
+}
+
+ion-menu{
+    .content-ios{
+        background-color: #fff;
+    }
+    ion-list{
+        padding: 20px 25px;
+    }
+    .item-ios{
+        background: none;
+        min-height: 50px;
+
+        border-top: none !important;
+        // border-bottom: 1px solid #5b5a5a !important;
+        &:last-child{
+            border: none !important;
+        }
+        ion-label{
+            // text-align: center;
+            font-size: 1.35rem;
+            // color: color($colors , grayColor);
+        }
+        ion-icon , i{
+            display: block;
+            color: #a0a9b3;
+            margin-bottom: 5px;
+        }
+    }
+    ion-footer{
+        .button-ios{
+            margin: 0;
+            border-radius: 0;
+        }
+    }
+}
+
+.head-menu{
+    padding-bottom: 22px;
+    .button-ios{
+        height: 28px;
+        width: 40px;
+        position: absolute;
+        right: 3px;
+        font-size: 1.3rem;
+    }
+    h4{
+        font-size: 1.6rem;
+        font-weight: normal;
+        // color: color($colors,light);
+    }
+    p{
+        font-size: 1.2rem;
+        // color: color($colors,light);
+    }
+}
+
+.user-img{
+    position: relative;
+    display: inline-block;
+    margin: 25px 0 10px 0;
+    img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+    ion-icon{
+        width: 28px;
+        height: 28px;
+        line-height: 1.75;
+        font-size: 1.6rem;
+        border-radius: 50%;
+        color: white;
+        position: absolute;
+        bottom: -1px;
+        right: 6px;
+        // background: color($colors , secondary);
+    }
+}
